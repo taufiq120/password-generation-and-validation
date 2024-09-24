@@ -16,13 +16,11 @@ const PasswordGenerator = () => {
     if (options.lowercase) characterPool += 'abcdefghijklmnopqrstuvwxyz';
     if (options.numbers) characterPool += '0123456789';
     if (options.specialChars) characterPool += '!@#$%^&*()_+{}[]<>?';
-
     let generatedPassword = '';
     for (let i = 0; i < length; i++) {
       const randomIndex = Math.floor(Math.random() * characterPool.length);
       generatedPassword += characterPool[randomIndex];
     }
-
     setPassword(generatedPassword);
   };
 
@@ -32,7 +30,6 @@ const PasswordGenerator = () => {
       [option]: !prevOptions[option],
     }));
   };
-
   return (
     <div className="password-generator">
       <h2>Password Generator</h2>
