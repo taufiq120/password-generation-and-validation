@@ -12,7 +12,6 @@ const PasswordValidator = () => {
       { regex: /[0-9]/, message: 'Must contain at least one number.' },
       { regex: /[!@#$%^&*()_+{}\[\]:;<>,.?~\\/-]/, message: 'Must contain at least one special character.' },
     ];
-
     for (let i = 0; i < criteria.length; i++) {
       if (!criteria[i].regex.test(password)) {
         setMessage(criteria[i].message);
@@ -21,7 +20,6 @@ const PasswordValidator = () => {
     }
     setMessage('Password is strong!');
   };
-
   return (
     <div className="password-validator">
       <h2>Password Validator</h2>
